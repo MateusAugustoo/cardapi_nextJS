@@ -8,10 +8,10 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
+      fontFamily: {
+        sans: ["var(--font-poppins)"],
+        lobster : ["var(--font-lobster)"]
+      }
     },
   },
   plugins: [],

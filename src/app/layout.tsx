@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
+import { Poppins, Lobster } from 'next/font/google'
 import "./globals.css";
 
+const poppins = Poppins({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+})
+
+const lobster = Lobster({
+  weight: ["400"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-lobster",
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className={`antialiased ${poppins.variable} ${lobster.variable}`}
       >
         {children}
       </body>
